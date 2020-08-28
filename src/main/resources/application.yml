@@ -1,5 +1,5 @@
 server:
-  port: 8762
+  port: 1020
 
 spring:
   application:
@@ -20,8 +20,11 @@ zuul:
     userService:
       path: /user/**
       serviceId: user-service
-      stripPrefix: true
+      stripPrefix: false
     personService:
       path: /person/**
       serviceId: person-service
-      stripPrefix: true
+      stripPrefix: false
+
+ribbon:
+  ReadTimeout: 60000
