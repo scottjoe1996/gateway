@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: gateway-server
+  mvc:
+    dispatchOptionsRequest: true
 
 eureka:
   client:
